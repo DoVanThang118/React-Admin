@@ -7,8 +7,6 @@ import {
     IconSubscription,
     // edit
     IconPresident,
-    IconPersonnel,
-    IconCreateAccount,
     IconRevenues,
     IconExpenses,
     //edit
