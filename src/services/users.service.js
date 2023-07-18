@@ -35,8 +35,8 @@ export const create_users = async(users) =>{
 export const edit_users = async(users) =>{
     const url = "users"
     try{
-        const rs = await api.put(url,{id:users.id, name:users.name, status:users.status, name:users.name, birthday:users.birthday, address:users.address, email:users.email, password:users.password, telephone:users.telephone, role:users.role, permissions:users.permissions, updateat:users.updateat});
-        //const rs = await api.put(url,{id:users.id, name:users.name, status:users.status, name:users.name, birthday:users.birthday, address:users.address, email:users.email, password:users.password, telephone:users.telephone, role:users.role, permissions:users.permissions, updateat:Date.now});
+        const rs = await api.put(url,{id:users.id, name:users.name, status:users.status, birthday:users.birthday, address:users.address, email:users.email, password:users.password, telephone:users.telephone, role:users.role, permissions:users.permissions, updateat:users.updateat});
+        //const rs = await api.put(url,{id:users.id, name:users.name, status:users.status, birthday:users.birthday, address:users.address, email:users.email, password:users.password, telephone:users.telephone, role:users.role, permissions:users.permissions, updateat:Date.now});
         alert("Edit users thanh cong");
         return {};
     }catch(error){
