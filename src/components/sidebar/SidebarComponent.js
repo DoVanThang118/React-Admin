@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import UserContext from "../../store/context";
 import { createUseStyles, useTheme } from 'react-jss';
 import { useHistory } from 'react-router-dom';
+import api from "../../services/api";
+
 import SLUGS from 'resources/slugs';
 import {
     IconLogout,
@@ -31,9 +34,10 @@ function SidebarComponent() {
     const classes = useStyles({ theme });
     const isMobile = window.innerWidth <= 1080;
 
+    const { state, dispatch } = useContext(UserContext);
     async function logout() {
         const u = null;
-        dispatch({type:"UPDATE_USER",payload:u});
+        dispatch({type:"AUTH_LOGOUT",payload:u});
         localStorage.setItem("state",JSON.stringify(state));
         api.defaults.headers.common["Authorization"] = `Bearer ${""}`;
 
