@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 // import React, { useReducer, useState, useEffect } from 'react';
 import INIT_STATE from '../store/initState';
 // import { UserProvider } from '../store/context';
@@ -8,10 +8,11 @@ import { useLocation } from 'react-router-dom';
 import useWindowSize from 'hooks/useWindowSize';
 import PrivateSection from 'routes/PrivateSection';
 import PublicRoutes from 'routes/PublicRoutes';
+import UserContext from "../store/context";
 
 function Routes() {
     const localState = localStorage.getItem("state") ? JSON.parse(localStorage.getItem("state")) : INIT_STATE;
-    //const [state, dispatch] = useReducer(reducer, localState);
+    //const {state} = localState;
     const { pathname } = useLocation();
     // eslint-disable-next-line no-unused-vars
     const [width, height] = useWindowSize();
@@ -20,8 +21,7 @@ function Routes() {
         window.scrollTo(0, 0);
     }, [pathname]);
     
-    const isUserLoggedIn = true;
-    return isUserLoggedIn ? <PrivateSection /> : <PublicRoutes />;
+    return (localState.token==null) ? <PrivateSection /> : <PublicRoutes />;
 }
 
 export default Routes;
