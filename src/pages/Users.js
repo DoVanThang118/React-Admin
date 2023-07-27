@@ -103,9 +103,15 @@ const Users = (props) => {
             <table className="table">
                 <thead>
                     <tr>
-                        <th scope="col">Id</th>
+                        <th scope="col">Stt</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Birthday</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Telephone</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Permissions</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -116,7 +122,13 @@ const Users = (props) => {
                                 <tr key={k}>
                                     <td>{k + 1}</td>
                                     <td>{e.name}</td>
-                                    <td>{e.status}</td>
+                                    <td>{e.role}</td>
+                                    <td>{e.birthday}</td>
+                                    <td>{e.address}</td>
+                                    <td>{e.telephone}</td>
+                                    <td>{e.email}</td>
+                                    <td>{e.password}</td>
+                                    <td>{e.permissions}</td>
                                     <td>
                                         <section>
                                             <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
