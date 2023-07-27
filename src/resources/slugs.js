@@ -29,6 +29,7 @@ export default {
 
 
     revenues: '/revenues',  //khoản thu
+    revenuesaction: '/revenues/:id',
 
     expenses: '/expenses',  //khoản chi
     //end edit

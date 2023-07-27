@@ -13,6 +13,7 @@ import Staffs from '../pages/Staffs';
 import Users from '../pages/Users';
 import Positions from '../pages/Positions';
 import Departments from '../pages/Departments';
+import RevenuesAction from 'pages/RevenuesAction';
 
 
 const DashboardComponent = lazy(() => import('./dashboard'));
@@ -32,6 +33,7 @@ function PrivateRoutes() {
                     <Route exact path={SLUGS.departments} render={() => <Departments />} />
                     
                     <Route exact path={SLUGS.revenues} render={() => <Revenues />} />
+                    <Route exact path={SLUGS.revenuesaction} render={() => <RevenuesAction />} />
                     <Route exact path={SLUGS.expenses} render={() => <Expenses />} />
                     {/* //edit */}
                     <Redirect to={SLUGS.dashboard} />
