@@ -51,6 +51,7 @@ const Login = (props) => {
         user[event.target.name] = event.target.value;
         setUser(user);
     }
+    
     const loginSubmit = async (e) => {
         e.preventDefault();
         const u = await auth_login(user);

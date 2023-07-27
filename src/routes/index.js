@@ -20,7 +20,7 @@ function Routes() {
         window.scrollTo(0, 0);
     }, [pathname]);
     
-    const isUserLoggedIn = false;
+    const isUserLoggedIn = true;
     return isUserLoggedIn ? <PrivateSection /> : <PublicRoutes />;
 }
 

@@ -32,6 +32,11 @@ function SidebarComponent() {
     const isMobile = window.innerWidth <= 1080;
 
     async function logout() {
+        const u = null;
+        dispatch({type:"UPDATE_USER",payload:u});
+        localStorage.setItem("state",JSON.stringify(state));
+        api.defaults.headers.common["Authorization"] = `Bearer ${""}`;
+
         push(SLUGS.login);
     }
 
