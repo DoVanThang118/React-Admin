@@ -34,12 +34,12 @@ function SidebarComponent() {
     const classes = useStyles({ theme });
     const isMobile = window.innerWidth <= 1080;
 
-    const { state, dispatch } = useContext(UserContext);
+    //const { state, dispatch } = useContext(UserContext);
     async function logout() {
-        const u = null;
-        dispatch({type:"AUTH_LOGOUT",payload:u});
-        localStorage.setItem("state",JSON.stringify(state));
-        api.defaults.headers.common["Authorization"] = `Bearer ${""}`;
+        // const u = null;
+        // dispatch({type:"AUTH_LOGOUT",payload:u});
+        // localStorage.setItem("state",JSON.stringify(state));
+        // api.defaults.headers.common["Authorization"] = `Bearer ${""}`;
 
         push(SLUGS.login);
     }

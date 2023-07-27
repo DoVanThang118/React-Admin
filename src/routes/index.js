@@ -21,7 +21,7 @@ function Routes() {
         window.scrollTo(0, 0);
     }, [pathname]);
     
-    return (localState.token==null) ? <PrivateSection /> : <PublicRoutes />;
+    return (localState.token!=null) ? <PrivateSection /> : <PublicRoutes />;
 }
 
 export default Routes;
